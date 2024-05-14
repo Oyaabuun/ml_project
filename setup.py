@@ -33,6 +33,6 @@ name=PROJECT_NAME,
 version=VERSION,
 author=AUTHOR,
 description=DESRCIPTION,
-packages=find_packages(), 
+packages=find_packages(), #this find_packages will return where ever there is __init__.py inside each of the folders 
 install_requires=get_requirements_list()
 )
