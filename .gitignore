@@ -15,6 +15,7 @@ downloads/
 eggs/
 .eggs/
 lib/
+machine_learning_project-main/
 lib64/
 parts/
 sdist/

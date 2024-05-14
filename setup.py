@@ -9,7 +9,7 @@ DESRCIPTION="This is a first FSDS Nov batch Machine Learning Project"
 
 REQUIREMENT_FILE_NAME="requirements.txt"
 
-HYPHEN_E_DOT = "-e ."
+HYPHEN_E_DOT = "-e ." #this inside the requirements.txt folder will also install the each folders as packages wherever there is __init__.py file is  present
 
 
 def get_requirements_list() -> List[str]:
