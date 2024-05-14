@@ -54,6 +54,7 @@ If you want to stop and remove all containers regardless of their status, you ca
 bash
 Copy code
 docker stop $(docker ps -aq)
+
 This command stops all running containers, and you can then remove them using:
 
 bash
