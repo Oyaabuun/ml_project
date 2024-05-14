@@ -60,3 +60,6 @@ This command stops all running containers, and you can then remove them using:
 bash
 Copy code
 docker rm $(docker ps -aq)
+
+to install setup tools use this command
+python setup.py install
