@@ -7,17 +7,17 @@ DataIngestionConfig=namedtuple("DataIngestionConfig",
 
 DataValidationConfig = namedtuple("DataValidationConfig", ["schema_file_path","report_file_path","report_page_file_path"])
 
-DataTransformationConfig = namedtuple("DataTransformationConfig", ["add_bedroom_per_room", # this datatransformationconfig is geiven for featuring engineering
+DataTransformationConfig = namedtuple("DataTransformationConfig", ["add_bedroom_per_room", # this datatransformationconfig is geiven for feature engineering
                                                                    "transformed_train_dir",
                                                                    "transformed_test_dir",
-                                                                   "preprocessed_object_file_path"])
+                                                                   "preprocessed_object_file_path"]) #preprocessed will hav e the pickle file path
 
 
-ModelTrainerConfig = namedtuple("ModelTrainerConfig", ["trained_model_file_path","base_accuracy","model_config_file_path"])
+ModelTrainerConfig = namedtuple("ModelTrainerConfig", ["trained_model_file_path","base_accuracy","model_config_file_path"]) #exporting the trained model pickle with this modeltarinerconfig
 
-ModelEvaluationConfig = namedtuple("ModelEvaluationConfig", ["model_evaluation_file_path","time_stamp"])
+ModelEvaluationConfig = namedtuple("ModelEvaluationConfig", ["model_evaluation_file_path","time_stamp"])  #model eval file is like wea re going to keep info about model eval
 
 
-ModelPusherConfig = namedtuple("ModelPusherConfig", ["export_dir_path"])
+ModelPusherConfig = namedtuple("ModelPusherConfig", ["export_dir_path"]) 
 
 TrainingPipelineConfig = namedtuple("TrainingPipelineConfig", ["artifact_dir"])
