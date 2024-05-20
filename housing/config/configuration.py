@@ -1,4 +1,4 @@
-
+# this config folder is different than the global config folder . there are 2 config folders, one in global directory and one inside the housing
 from housing.entity.config_entity import DataIngestionConfig, DataTransformationConfig,DataValidationConfig,   \
 ModelTrainerConfig,ModelEvaluationConfig,ModelPusherConfig,TrainingPipelineConfig
 from housing.util.util import read_yaml_file
