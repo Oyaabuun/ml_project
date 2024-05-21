@@ -1,4 +1,5 @@
 # this config folder is different than the global config folder . there are 2 config folders, one in global directory and one inside the housing
+#we are going to use the config_entity.py file from entity folder and config.yaml from global config folder
 from housing.entity.config_entity import DataIngestionConfig, DataTransformationConfig,DataValidationConfig,   \
 ModelTrainerConfig,ModelEvaluationConfig,ModelPusherConfig,TrainingPipelineConfig
 from housing.util.util import read_yaml_file
@@ -22,9 +23,9 @@ class Configuartion:
             raise HousingException(e,sys) from e
 
 
-    def get_data_ingestion_config(self) ->DataIngestionConfig:
+    def get_data_ingestion_config(self) ->DataIngestionConfig: #all these funcyion will return  an entity
         try:
-            artifact_dir = self.training_pipeline_config.artifact_dir
+            artifact_dir = self.training_pipeline_config.artifact_dir #in this block of code we are reading the config.yaml file and creating an object of dataingestion namedtuple
             data_ingestion_artifact_dir=os.path.join(
                 artifact_dir,
                 DATA_INGESTION_ARTIFACT_DIR,

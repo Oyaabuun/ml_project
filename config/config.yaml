@@ -1,43 +1,46 @@
+# Configuration for the training pipeline, this is the information file which will paass data to the D:\jupyter\ineuron old\Machine Learning Project\housing\entity\config_entity.py for the pipeline
+#1st we created all the things inside the entity then we setup the route in this global config/config.yaml file
 training_pipeline_config:
-  pipeline_name: housing
-  artifact_dir: artifact
+  pipeline_name: housing  # Name of the pipeline
+  artifact_dir: artifact  # Directory to store pipeline artifacts (every component of pipeline will generate artifacts), artifacts locations , check the study folder for the location of images contaiing model pipeline
 
-data_ingestion_config:
-  dataset_download_url: https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz
-  raw_data_dir: raw_data
-  tgz_download_dir: tgz_data
-  ingested_dir: ingested_data
-  ingested_train_dir: train
-  ingested_test_dir: test 
+# Data ingestion configuration
+data_ingestion_config:     #we have already created a ma,ed tuple for it 
+  dataset_download_url: https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz  # URL to download the dataset
+  raw_data_dir: raw_data  # Directory to store raw data
+  tgz_download_dir: tgz_data  # Directory to store downloaded tgz files
+  ingested_dir: ingested_data  # Directory to store ingested data
+  ingested_train_dir: train  # Directory to store ingested training data
+  ingested_test_dir: test  # Directory to store ingested testing data
 
-
-
-
+# Data validation configuration
 data_validation_config:
-  schema_dir: config
-  schema_file_name: schema.yaml
-  report_file_name: report.json
-  report_page_file_name: report.html
+  schema_dir: config  # Directory to store schema files
+  schema_file_name: schema.yaml  # Name of the schema file
+  report_file_name: report.json  # Name of the JSON report file
+  report_page_file_name: report.html  # Name of the HTML report file
 
+# Data transformation configuration
 data_transformation_config:
-  add_bedroom_per_room: true
-  transformed_dir: transformed_data
-  transformed_train_dir: train
-  transformed_test_dir: test
-  preprocessing_dir: preprocessed
-  preprocessed_object_file_name: preprocessed.pkl
+  add_bedroom_per_room: true  # Whether to add a bedroom per room feature 
+  transformed_dir: transformed_data  # Directory to store transformed data
+  transformed_train_dir: train  # Directory to store transformed training data
+  transformed_test_dir: test  # Directory to store transformed testing data
+  preprocessing_dir: preprocessed  # Directory to store preprocessing artifacts
+  preprocessed_object_file_name: preprocessed.pkl  # Name of the preprocessed object file
   
+# Model trainer configuration
 model_trainer_config:
-  trained_model_dir: trained_model
-  model_file_name: model.pkl
-  base_accuracy: 0.6
-  model_config_dir: config
-  model_config_file_name: model.yaml
+  trained_model_dir: trained_model  # Directory to store trained models
+  model_file_name: model.pkl  # Name of the model file
+  base_accuracy: 0.6  # Base accuracy for the model
+  model_config_dir: config  # Directory to store model configuration files
+  model_config_file_name: model.yaml  # Name of the model configuration file
 
-
+# Model evaluation configuration
 model_evaluation_config:
-  model_evaluation_file_name: model_evaluation.yaml
-  
+  model_evaluation_file_name: model_evaluation.yaml  # Name of the model evaluation file
 
+# Model pusher configuration
 model_pusher_config:
-  model_export_dir: saved_models
+  model_export_dir: saved_models  # Directory to export saved models
