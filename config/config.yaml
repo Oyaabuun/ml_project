@@ -5,7 +5,7 @@ training_pipeline_config:
   artifact_dir: artifact  # Directory to store pipeline artifacts (every component of pipeline will generate artifacts), artifacts locations , check the study folder for the location of images contaiing model pipeline
 
 # Data ingestion configuration
-data_ingestion_config:     #we have already created a ma,ed tuple for it 
+data_ingestion_config:     #we have already created a named tuple for it 
   dataset_download_url: https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz  # URL to download the dataset
   raw_data_dir: raw_data  # Directory to store raw data
   tgz_download_dir: tgz_data  # Directory to store downloaded tgz files

@@ -22,13 +22,13 @@ CURRENT_TIME_STAMP = get_current_time_stamp()
 
 # Training pipeline related variable  , we wan thte key so we are getting these 3 lines data actually from config.yaml first 3 lines 
 TRAINING_PIPELINE_CONFIG_KEY = "training_pipeline_config"
-TRAINING_PIPELINE_ARTIFACT_DIR_KEY = "artifact_dir"
+TRAINING_PIPELINE_ARTIFACT_DIR_KEY = "artifact_dir" 
 TRAINING_PIPELINE_NAME_KEY = "pipeline_name"
 
-
+#the mapping for the below has been done like from config.yaml we are getting the value of the key which is defined in the below
 # Data Ingestion related variable
-
-DATA_INGESTION_CONFIG_KEY = "data_ingestion_config"
+# defining some constants related to config.yaml the portion called #data ingestion configuration will be called and these below variable attributes willbe assigned
+DATA_INGESTION_CONFIG_KEY = "data_ingestion_config" #we will try to use these keys everywhere instead of using the direct config.yaml file
 DATA_INGESTION_ARTIFACT_DIR = "data_ingestion"
 DATA_INGESTION_DOWNLOAD_URL_KEY = "dataset_download_url"
 DATA_INGESTION_RAW_DATA_DIR_KEY = "raw_data_dir"
@@ -37,7 +37,7 @@ DATA_INGESTION_INGESTED_DIR_NAME_KEY = "ingested_dir"
 DATA_INGESTION_TRAIN_DIR_KEY = "ingested_train_dir"
 DATA_INGESTION_TEST_DIR_KEY = "ingested_test_dir"
 
-# Data Validation related variable
+
 
 # Data Validation related variables
 DATA_VALIDATION_CONFIG_KEY = "data_validation_config"
