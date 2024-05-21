@@ -29,7 +29,7 @@ TRAINING_PIPELINE_NAME_KEY = "pipeline_name"
 # Data Ingestion related variable
 # defining some constants related to config.yaml the portion called #data ingestion configuration will be called and these below variable attributes willbe assigned
 DATA_INGESTION_CONFIG_KEY = "data_ingestion_config" #we will try to use these keys everywhere instead of using the direct config.yaml file
-DATA_INGESTION_ARTIFACT_DIR = "data_ingestion"
+DATA_INGESTION_ARTIFACT_DIR = "data_ingestion" #this is the name of the folder where the data will be stored its not the key. 
 DATA_INGESTION_DOWNLOAD_URL_KEY = "dataset_download_url"
 DATA_INGESTION_RAW_DATA_DIR_KEY = "raw_data_dir"
 DATA_INGESTION_TGZ_DOWNLOAD_DIR_KEY = "tgz_download_dir"

@@ -16,7 +16,7 @@ class Configuartion:
         current_time_stamp:str = CURRENT_TIME_STAMP #this is coming from the constant folder
         ) -> None:
         try:
-            self.config_info  = read_yaml_file(file_path=config_file_path) #erading the config information
+            self.config_info  = read_yaml_file(file_path=config_file_path) #reading the config information
             self.training_pipeline_config = self.get_training_pipeline_config() 
             self.time_stamp = current_time_stamp
         except Exception as e:
@@ -57,7 +57,7 @@ class Configuartion:
 
 
             data_ingestion_config=DataIngestionConfig(
-                dataset_download_url=dataset_download_url, 
+                dataset_download_url=dataset_download_url, #the required parameters were built in the above steps
                 tgz_download_dir=tgz_download_dir, 
                 raw_data_dir=raw_data_dir, 
                 ingested_train_dir=ingested_train_dir, 
