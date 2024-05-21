@@ -1,3 +1,4 @@
+#util will act as a helper function which are not part of our main pipeline code but will help us 
 import yaml
 from housing.exception import HousingException
 import os,sys

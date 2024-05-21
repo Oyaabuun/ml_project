@@ -1,4 +1,4 @@
-
+# all constants are declared here
 
 import os
 from datetime import datetime

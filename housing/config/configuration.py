@@ -2,10 +2,10 @@
 #we are going to use the config_entity.py file from entity folder and config.yaml from global config folder
 from housing.entity.config_entity import DataIngestionConfig, DataTransformationConfig,DataValidationConfig,   \
 ModelTrainerConfig,ModelEvaluationConfig,ModelPusherConfig,TrainingPipelineConfig
-from housing.util.util import read_yaml_file
+from housing.util.util import read_yaml_file #we are importing util functions for usability , these are our custom fucntions for our project not a pat of main pipeline
 from housing.logger import logging
 import sys,os
-from housing.constant import *
+from housing.constant import * #we are importing constant file from constant folder
 from housing.exception import HousingException
 
 
@@ -25,7 +25,7 @@ class Configuartion:
 
     def get_data_ingestion_config(self) ->DataIngestionConfig: #all these funcyion will return  an entity
         try:
-            artifact_dir = self.training_pipeline_config.artifact_dir #in this block of code we are reading the config.yaml file and creating an object of dataingestion namedtuple
+            artifact_dir = self.training_pipeline_config.artifact_dir #in this block of code we are reading the config.yaml file and creating an object of dataingestion namedtuple that will be passed to config_entity.py
             data_ingestion_artifact_dir=os.path.join(
                 artifact_dir,
                 DATA_INGESTION_ARTIFACT_DIR,
