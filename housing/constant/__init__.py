@@ -1,4 +1,4 @@
-# all constants are declared here
+# all constants are declared here which will be used in the code
 
 import os
 from datetime import datetime
@@ -20,7 +20,7 @@ CURRENT_TIME_STAMP = get_current_time_stamp()
 
 
 
-# Training pipeline related variable
+# Training pipeline related variable  , we wan thte key so we are getting these 3 lines data actually from config.yaml first 3 lines 
 TRAINING_PIPELINE_CONFIG_KEY = "training_pipeline_config"
 TRAINING_PIPELINE_ARTIFACT_DIR_KEY = "artifact_dir"
 TRAINING_PIPELINE_NAME_KEY = "pipeline_name"
